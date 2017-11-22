@@ -1,0 +1,48 @@
+<nav style="background-color: #33A0C2">
+  <div>
+    <ul id="nav-which-blog">
+      <li id="all" (click)="showAllDiv()" #all><a>All Blogs</a></li>
+      <li id="my"  (click)="showMyDiv()" #my><a>My Blogs</a></li>
+      <li id="fav" (click)="showFavDiv()" #fav><a>Favorite</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="collection" id="divAll">
+    <a *ngFor="let blog of blogs" >
+    <div style="color: black">
+      <i *ngIf="getSessionUser().favorite.includes(blog.id)" (click)="emitFavData(blog.id,true)" class="material-icons" style="color:lightcoral ;float: right; margin-right: 20px">favorite</i>
+      <i *ngIf="!getSessionUser().favorite.includes(blog.id)" (click)="emitFavData(blog.id,false)" class="material-icons" style="float: right; margin-right: 20px">favorite</i>
+      <i>Title: </i> <b>{{blog.name}}</b><br/>
+      <i>Category: </i> <b>{{blog.category}}</b><br/>
+      <i>Content: </i> <b>{{blog.desc}}</b><br/>
+      <i>Last Update time: </i> <b>{{blog.time}}</b><br/>
+      <div><br/></div>
+    </div>
+  </a>
+</div>
+
+<div id="divMy" class="collection" style="display: none">
+  <a *ngFor="let blog of blogs" >
+    <div *ngIf="blog.authorId ===  getSessionKey()" style="color: black">
+      <i (click)="emitDeleteData(blog)" class="material-icons" style="float: right ; color: lightcoral">delete</i>
+      <i (click)="emitUpdateData(blog)" class="material-icons" style="float: right; margin-right: 5%; color: lightblue">edit</i>
+      <i>Title: </i> <b>{{blog.name}}</b><br/>
+      <i>Category: </i> <b>{{blog.category}}</b><br/>
+      <i>Content: </i> <b>{{blog.desc}}</b><br/>
+      <i>Last Update time: </i> <b>{{blog.time}}</b><br/>
+      <div><br/></div>
+    </div>
+  </a>
+</div>
+
+<div id="divFav" class="collection" style="display: none">
+  <a *ngFor="let blog of blogs" >
+    <div *ngIf="getSessionUser().favorite.includes(blog.id)" style="color: black">
+      <i>Title: </i> <b>{{blog.name}}</b><br/>
+      <i>Category: </i> <b>{{blog.category}}</b><br/>
+      <i>Content: </i> <b>{{blog.desc}}</b><br/>
+      <i>Last Update time: </i> <b>{{blog.time}}</b><br/>
+      <div><br/></div>
+    </div>
+  </a>
+</div>

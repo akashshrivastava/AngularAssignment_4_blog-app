@@ -1,0 +1,103 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "akash",
+      "password": "akash",
+      "favorite": [
+        9,
+        10,
+        12
+      ]
+    },
+    {
+      "id": 2,
+      "username": "aayush",
+      "password": "aayush",
+      "favorite": [
+        11
+      ]
+    },
+    {
+      "id": 3,
+      "username": "rahul",
+      "password": "rahul",
+      "favorite": []
+    },
+    {
+      "id": 4,
+      "username": "krishna",
+      "password": "krishna",
+      "favorite": [
+        11,
+        13
+      ]
+    }
+  ],
+  "blogList": [
+    {
+      "name": "Blog 1",
+      "desc": "This tech blog is written by Akash",
+      "category": "Technical",
+      "time": "2017-11-22T04:16:45.480Z",
+      "authorId": "1",
+      "id": 9
+    },
+    {
+      "name": "Blog 2",
+      "desc": "This mgnt blog is written by Akash",
+      "category": "Management",
+      "time": "2017-11-22T04:17:08.523Z",
+      "authorId": "1",
+      "id": 10
+    },
+    {
+      "name": "My first blog",
+      "desc": "User2's first technical blog",
+      "category": "Technical",
+      "time": "2017-11-22T04:19:24.872Z",
+      "authorId": "2",
+      "id": 11
+    },
+    {
+      "name": "My second blog",
+      "desc": "User2's first management blog",
+      "category": "Management",
+      "time": "2017-11-22T04:19:45.091Z",
+      "authorId": "2",
+      "id": 12
+    },
+    {
+      "name": "Blog 3",
+      "desc": "this is one more blog from akash. ",
+      "category": "Management",
+      "time": "2017-11-22T08:06:37.369Z",
+      "authorId": "1",
+      "id": 13
+    },
+    {
+      "name": "my blog 1",
+      "desc": "This is krishna's first management blog",
+      "category": "Management",
+      "time": "2017-11-22T08:10:05.599Z",
+      "authorId": "4",
+      "id": 14
+    },
+    {
+      "name": "test blog 1",
+      "desc": "this is rahul's technical blog",
+      "category": "Technical",
+      "time": "2017-11-22T08:11:29.396Z",
+      "authorId": "3",
+      "id": 15
+    },
+    {
+      "name": "test blog 2",
+      "desc": "this is rahul's management blog",
+      "category": "Management",
+      "time": "2017-11-22T08:11:42.304Z",
+      "authorId": "3",
+      "id": 16
+    }
+  ]
+}

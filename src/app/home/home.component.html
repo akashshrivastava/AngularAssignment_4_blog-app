@@ -1,0 +1,21 @@
+<nav style="background-color: #218DAE">
+  <div class="nav-wrapper" >
+    <label style="font-size: x-large; color: white; margin-left: 20px">Hi... {{currentUserName}}</label>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li (click)="logout()"><a >Logout</a></li>
+    </ul>
+  </div>
+</nav><br/>
+
+<div class="contaioner">
+  <div class="row">
+    <div class="col s6">
+      <app-show-blogs (notifyFavData)="addToFav($event)" (notifyDeleteData)="deleteBlog($event)" (notifyUpdateData)="displayInForm($event)" [blogs]="blogs"></app-show-blogs>
+    </div>
+    <div class="col s6">
+      <app-add-blogs (notifyNewData)="addBlog($event)"></app-add-blogs>
+    </div>
+  </div>
+</div>
+
+

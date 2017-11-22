@@ -1,0 +1,33 @@
+<nav style="background-color: #33A0C2">
+  <label style="font-size: x-large;margin: 30%; color: white;">Add Your Blog Here</label>
+  <ul id="nav-which-blog">
+      <li>Add blogs here</li>
+    </ul>
+</nav><br/>
+
+
+<div class="container">
+  <div class="row">
+    <form>
+    <div class="col s6">
+      <label>Title</label>
+      <input #name id="name" type="text" value="" placeholder="Enter title">
+    </div>
+    <div class="col s6">
+      <label>Category</label>
+      <select #category id="category" style="display: block">
+        <option disabled selected>Choose your option</option>
+        <option value="Technical">Technical</option>
+        <option value="Management">Management</option>
+      </select>
+    </div>
+    <div class="col s12">
+      <label>Description</label>
+      <textarea #desc id="desc" class="materialize-textarea"></textarea>
+    </div><br/>
+      <div class="col s4">
+        <button class="btn waves-effect waves-light" style="background-color:#33A0C2" (click)="emitNewdata(name.value,desc.value,category.value)">Post Blog</button>
+      </div>
+    </form>
+ </div>
+</div>
